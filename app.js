@@ -3,9 +3,9 @@ const httpServer = require('./server')
 const modoServer = require('./config/modoServer');
 
 //const dotenv = require('dotenv').config()
-//const PORT = process.env.PORT || 8085
+const PORT = process.env.PORT || 8085
 
-const PORT = puerto
+//const PORT = puerto
 const modo = modoServer
 
 const os = require('os')
