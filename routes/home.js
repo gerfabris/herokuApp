@@ -1,7 +1,7 @@
 const express = require("express");
+const { Router } = express;
 const checkAuth = require("../middlewares/auth.middleware.js");
 const logger = require("../utils/logger.js");
-const { Router } = express;
 const passport = require('./passport.js');
 
 const router = Router();

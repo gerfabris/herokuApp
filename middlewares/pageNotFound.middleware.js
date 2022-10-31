@@ -6,7 +6,7 @@ const pageNotFound = (req, res, next) => {
         let error = new Error()
         error.status = 404
         logger.warn('Error 404')
-        res.status(404).send(`Error 404: Página no encontrada`)
+        res.status(404).redirect('/notFound')
     } catch (error) {
         res.status(500).json({
             success: false,

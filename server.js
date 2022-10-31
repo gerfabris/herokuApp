@@ -12,12 +12,13 @@ const productosTest = require('./routes/productos-test.js');
 const info = require('./routes/info.js');
 const randoms = require('./routes/randoms.js');
 const infoCompress = require('./routes/info-compress.js');
+const notFound = require('./routes/notFound.js');
 /* ----- socket ------- */
 const productosTestSocket = require('./sockets/productos-test.js');
 const mensajes = require('./sockets/mensajes.js');
 const productos = require('./sockets/productos.js');
 /* --------- middlewares -------- */
-const pageNotFound = require('./middlewares/pageNotFound.middleware.js');
+const middlewareNotFound = require('./middlewares/pageNotFound.middleware.js');
 /* --------- app -------- */
 const app = express();
 /* ------ config socket ------ */
@@ -58,7 +59,10 @@ app.use(productosTest);
 app.use(info);
 app.use(randoms);
 app.use(infoCompress);
-app.use(pageNotFound)
+app.use(notFound)
+/*  ----- middleware */
+
+app.use(middlewareNotFound)
 
 /* ----- socket escuchando las conecciones */
 io.on('connection', async (socket) =>{
