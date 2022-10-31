@@ -2,8 +2,7 @@
 
 ## Desplegar nuestro proyecto en la nube
 
-Live: [Aquí]()
-Link heroku: https://git.heroku.com/servech-ger.git
+Live: https://servech-ger.herokuapp.com/login
 
 ### Consigna: 
 
